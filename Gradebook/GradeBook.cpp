@@ -1,4 +1,5 @@
 #include <iostream>
+#include <string>
 #include "GradeBook.h"
 using namespace std;
 
@@ -7,7 +8,13 @@ GradeBook :: GradeBook(string name){
 }
 
 void GradeBook :: setCourseName(string name){
-    courseName = name;
+    if (name.size() <= 25)
+        courseName = name;
+    else{
+        courseName = name.substr(0, 25);
+        cerr << "Name \"" << name << "\" exceeds maximum length (25).\n"
+                "Limiting courseName to first 25 characters.\n" << endl;
+    }
 }
 
 string GradeBook :: getCourseName() const{
