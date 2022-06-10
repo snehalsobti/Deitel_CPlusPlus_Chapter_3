@@ -5,8 +5,8 @@ using namespace std;
 
 int main()
 {
-    Employee employee1("Jarvin", "Gill", 50);
-    Employee employee2("Shawn", "Sebastian", 60);
+    Employee employee1{"Jarvin", "Gill", 50};
+    Employee employee2{"Shawn", "Sebastian", 60};
     
     cout << "Employee: " << employee1.getFirstName() 
          << " " << employee1.getLastName() << endl;
